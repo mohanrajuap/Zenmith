@@ -1,0 +1,23 @@
+{
+  "name": "Zenmith Radiance Private Limited",
+  "short_name": "Zenmith Radiance",
+  "description": "IT training and placement support in Chennai.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#071521",
+  "theme_color": "#071521",
+  "icons": [
+    {
+      "src": "assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/favicon-64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ],
+  "scope": "./"
+}

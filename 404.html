@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071521">
+  <meta name="robots" content="noindex, follow">
+  <title>Page not found | Zenmith Radiance</title>
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" href="assets/favicon-64.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="elegant.css">
+  <style>
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(ellipse at 76% 20%, rgba(215, 166, 66, 0.13), transparent 38%),
+        radial-gradient(ellipse at 8% 90%, rgba(28, 91, 184, 0.18), transparent 36%),
+        linear-gradient(128deg, #020b17, #061a33 55%, #0a2a4d);
+      color: #fff;
+    }
+
+    .error-main {
+      display: grid;
+      min-height: calc(100vh - 72px);
+      place-items: center;
+      padding: 70px 0;
+      text-align: center;
+    }
+
+    .error-wrap {
+      max-width: 680px;
+    }
+
+    .error-code {
+      margin-bottom: 17px;
+      color: var(--gold);
+      font-family: var(--font-brand);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+    }
+
+    .error-wrap h1 {
+      margin-bottom: 20px;
+      color: #f8f3e9;
+      font-family: var(--font-serif);
+      font-size: clamp(3rem, 7vw, 5.2rem);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 0.98;
+    }
+
+    .error-wrap h1 em {
+      display: block;
+      color: var(--gold-light);
+      font-family: var(--font-serif);
+      font-size: 1.06em;
+      font-style: italic;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    .error-wrap p {
+      max-width: 510px;
+      margin: 0 auto 28px;
+      color: rgba(224, 234, 244, 0.62);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .error-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 11px;
+    }
+
+    .error-contact {
+      margin-top: 27px;
+      color: rgba(255, 255, 255, 0.42);
+      font-size: 0.74rem;
+    }
+
+    .error-contact a {
+      color: var(--gold-light);
+    }
+
+    @media (max-width: 680px) {
+      .error-main {
+        min-height: calc(100vh - 68px);
+        padding: 55px 0;
+      }
+
+      .error-actions .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="/" data-site-home aria-label="Zenmith Radiance home">
+        <img class="brand-emblem" src="assets/logo-mark.png" width="320" height="150" alt="">
+        <span class="brand-copy"><strong>Zenmith Radiance</strong><small>Private Limited</small></span>
+      </a>
+      <a class="btn btn-gold btn-sm" href="/" data-site-home>Back to home <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+    </div>
+  </header>
+
+  <main class="error-main">
+    <div class="container error-wrap">
+      <p class="error-code">404 &middot; Page not found</p>
+      <h1>This page isn't part of<br><em>your path.</em></h1>
+      <p>The page you were looking for may have moved or no longer exists. Head back to the academy home page, or start a conversation with our team.</p>
+      <div class="error-actions">
+        <a class="btn btn-gold btn-lg" href="/" data-site-home>Return home <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+        <a class="btn btn-ghost btn-lg" href="/#contact" data-site-home data-contact>Talk to a counsellor</a>
+      </div>
+      <p class="error-contact">Call or WhatsApp&nbsp;<a href="tel:+919600169790">+91&nbsp;96001&nbsp;69790</a><span aria-hidden="true"> &middot; </span><a href="/" data-site-home>zenmithradiance.com</a></p>
+    </div>
+  </main>
+
+  <script>
+    (() => {
+      const links = document.querySelectorAll("[data-site-home]");
+      if (!links.length) return;
+      const segments = window.location.pathname.split("/").filter(Boolean);
+      const isProjectPage = /\.github\.io$/i.test(window.location.hostname) && segments.length > 0;
+      const base = isProjectPage ? `/${segments[0]}/` : "/";
+      links.forEach((link) => {
+        link.href = link.hasAttribute("data-contact") ? `${base}#contact` : base;
+      });
+    })();
+  </script>
+</body>
+</html>
