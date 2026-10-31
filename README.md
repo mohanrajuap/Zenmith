@@ -19,7 +19,7 @@ A fast, responsive, static website for **Zenmith Radiance Private Limited**, bra
 - **Company:** Zenmith Radiance Private Limited
 - **Founder & Director:** N. Raviprasanth
 - **Phone / WhatsApp:** +91 96001 69790
-- **Email:** raviprasanth@zenmithradiance.com
+- **Email:** raviprasanth.zenmithradiance@gmail.com
 - **Address:** 11, Balaji Street, Vivekananthar Street, Kolathur, Chennai – 600 099
 - **Website:** zenmithradiance.com
 
